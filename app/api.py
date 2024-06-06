@@ -18,6 +18,7 @@ def materiais():
 @app.route('/empresa')
 def empresa():
     return render_template('empresa.html')
+    
 
 
 if __name__ == "__main__":
