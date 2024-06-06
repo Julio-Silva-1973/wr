@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materiais</title>
+</head>
+<body>
+    <h1>Materiais</h1>
+    <nav>
+        <ul>
+            <li><a href="{{url_for('home')}}">Home</a></li>
+            <li><a href="{{url_for('servicos')}}">Serviços</a></li>
+            <li><a href="{{url_for('materiais')}}">Materiais</a></li>
+            <li><a href="{{url_for('empresa')}}">Empresa</a></li>
+        </ul>
+    </nav>
+    
+    
+</body>
+<style>
+    nav{
+        background-color: black;
+            padding: 10px 0;
+        }
+
+        nav ul{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a{
+            color: white;
+            font: bold 20px arial;
+            text-decoration: none;
+        }
+
+</style>
+</html>

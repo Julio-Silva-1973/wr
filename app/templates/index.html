@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WR PROTEÇÃO CONTRA INCÊNDIO</title>
+
+    <STYLE>
+        body{
+            text-align: center;
+
+            background-color: rgb(231, 42, 51);
+            font: Normal 20pt Arial
+        } 
+       
+
+        h1{
+            text-align: center;
+            font : bold 25pt arial;
+        }
+
+        h2{
+            
+            font: bold 30pt arial;
+        }
+
+        p{
+            color: beige;
+            
+        }
+
+    
+    nav{
+        background-color: black;
+            padding: 10px 0;
+        }
+
+        nav ul{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a{
+            color: white;
+            font: bold 20px arial;
+            text-decoration: none;
+        }
+
+        nav ul li a :hover{
+            background-color: aquamarine;
+            color: blue;
+        }
+
+        .ocultar {
+    display: none;
+}
+
+        .mostrar {
+    display: block;
+}
+
+</style>
+
+    
+</head>
+
+<body>
+    <h2>WR TREINAMENTOS E PROTEÇÃO CONTRA INCÊNDIOS</h2>
+    <h1>ÍNICIO</h1>
+    <nav>
+        <ul>
+            <li><a href="{{url_for('home')}}">Home</a></li>
+            <li><a href="{{url_for('servicos')}}">Serviços</a></li>
+            <li><a href="{{url_for('materiais')}}">Materiais</a></li>
+            <li><a href="{{url_for('empresa')}}">Empresa</a></li>
+        </ul>
+    </nav><br>
+        
+    <img src="{{url_for('static', filename='bombeiros.jpg')}}" alt="incêndios" width="800" height="500" class="center"><br>
+    <button onclick="exibirTexto()">INTRODUÇÃO</button>
+    <div id="caixadeTexto" class="ocultar"></div><br><br>
+
+    <img src="{{url_for('static', filename='projeto.jpg')}}" alt="incêndios" width="800" height="500" class="center"><br>
+    <button onclick="exibirTexto1()">PROJETOS</button>
+    <div id = "caixadeTexto1" class="ocultar"></div><br><br>
+        
+    <img src="{{url_for('static', filename='hidrante.jpg')}}" alt="incêndios" width="800" height="500" class="center"><br>
+    <button onclick="exibirTexto2()">INSTALAÇÕES</button>
+    <div id = "caixadeTexto2" class="ocultar"></div><br><br>
+
+    <img src="{{url_for('static', filename='treinamento.jpg')}}" alt="incêndios" width="800" height="500" class="center"><br>
+    <button onclick="exibirTexto3()">TREINAMENTOS</button>
+    <div id = "caixadeTexto3"></div><br>
+    
+
+
+
+<script>
+    window.alert('Bem vindo a WR.')
+    //window.prompt('Qual é o seu nome')
+    var nome = window.prompt('Qual é o seu nome?')
+    window.alert('Olá ' + nome)
+
+    function exibirTexto() {
+            var caixadeTexto = document.getElementById("caixadeTexto");
+            var texto = "Aqui você vai encontrar soluções definitivas para os problemas com fiscalização, e adequação às mudanças da sua empresa.";
+            if (caixadeTexto.classList.contains("ocultar")) {
+                caixadeTexto.innerHTML = texto;
+                caixadeTexto.classList.remove("ocultar");
+                caixadeTexto.classList.add("mostrar");
+            } else {
+                caixadeTexto.innerHTML = "";
+                caixadeTexto.classList.remove("mostrar");
+                caixadeTexto.classList.add("ocultar");
+            }
+        }
+            
+    function exibirTexto1() {
+        var caixadeTexto1 = document.getElementById("caixadeTexto1");
+        var texto1 = "Elaboramos seu projeto de acordo com as normas vigentes da prefeitura e corpo de bombeiros.";
+        if (caixadeTexto1.classList.contains("ocultar")) {
+            caixadeTexto1.innerHTML=texto1;
+            caixadeTexto1.classList.remove("ocultar");
+            caixadeTexto1.classList.add("mostrar");
+        } else {
+            caixadeTexto1.innerHTML="";
+            caixadeTexto1.classList.remove("mostrar");
+            caixadeTexto1.classList.add("ocultar");
+        }
+    }
+
+    function exibirTexto2() {
+        var caixadeTexto2 = document.getElementById("caixadeTexto2");
+        var texto2 = "Nossa equipe possui grande experiência e trabalhamos com materias da melhor qualidade!";
+        if (caixadeTexto2.classList.contains("ocultar")) {
+            caixadeTexto2.innerHTML=texto2;
+            caixadeTexto2.classList.remove("ocultar");
+            caixadeTexto2.classList.add("mostrar");
+        } else {
+            caixadeTexto2.innerHTML="";
+            caixadeTexto2.classList.remove("mostrar");
+            caixadeTexto2.classList.add("ocultar");
+        }
+        
+    }
+
+    function exibirTexto3() {
+        var caixaTexto3 = document.getElementById("caixadeTexto3");
+        var texto3 = "Possuimos instrutores capacitados e temos cursos: de CIPA, Brigada de Incêndio e Primeiros Socorros."
+        if (caixadeTexto3.classList.contains("ocultar")) {
+            caixaTexto3.innerHTML=texto3;
+            caixaTexto3.classList.remove("ocultar");
+            caixaTexto3.classList.add("mostrar");
+        } else {
+            caixaTexto3.innerHTML="";
+            caixaTexto3.classList.remove("mostrar");
+            caixaTexto3.classList.add("ocultar");
+        }
+    }
+
+</script>
+
+
+</body
+>
+</html>
